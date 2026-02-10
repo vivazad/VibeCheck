@@ -1,0 +1,10 @@
+export { RatePage } from './RatePage';
+export { ThankYouPage } from './ThankYouPage';
+export { LoginPage } from './Auth/LoginPage';
+export { SignupPage } from './Auth/SignupPage';
+export { OnboardingPage } from './Auth/OnboardingPage';
+export { Dashboard } from './Dashboard';
+export { HomePage } from './HomePage';
+export { SettingsPage } from './SettingsPage';
+export { TasksPage } from './TasksPage';
+export { IntegrationPage } from './IntegrationPage';

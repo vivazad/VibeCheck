@@ -1,0 +1,36 @@
+{
+    "form": {
+        "submitButton": "Enviar Comentarios",
+        "submitting": "Enviando...",
+        "required": "obligatorio"
+    },
+    "placeholders": {
+        "tellUsMore": "Cuéntanos más...",
+        "shareThoughts": "Comparte tus pensamientos...",
+        "enterPhone": "Ingresa tu número de teléfono"
+    },
+    "labels": {
+        "phoneOptional": "Tu Número de Teléfono (opcional)"
+    },
+    "nps": {
+        "promoterBadge": "🎉 Promotor",
+        "passiveBadge": "🤔 Pasivo",
+        "detractorBadge": "😔 Podemos hacerlo mejor"
+    },
+    "followUp": {
+        "detractor": "Lamentamos escuchar eso. ¿Qué podríamos mejorar?",
+        "passive": "¿Qué haría que nos dieras un 9 o 10?",
+        "promoter": "¡Genial! ¿Qué fue lo que más te gustó de tu experiencia?"
+    },
+    "thankYou": {
+        "title": "¡Gracias!",
+        "message": "Hemos recibido tus comentarios. Agradecemos que te hayas tomado el tiempo de compartir tus pensamientos.",
+        "tipPrompt": "¿Te gustaría dejar una propina?"
+    },
+    "errors": {
+        "loadFailed": "Error al cargar el formulario. Por favor, inténtalo de nuevo.",
+        "submitFailed": "Error al enviar los comentarios. Por favor, inténtalo de nuevo.",
+        "invalidTenant": "ID de negocio inválido o faltante.",
+        "networkError": "Error de red. Por favor, verifica tu conexión."
+    }
+}
