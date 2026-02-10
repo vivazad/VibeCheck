@@ -1,15 +1,15 @@
 services:
-  # Backend API
+  # Backend API (Node.js)
   - type: web
     name: vibecheck-backend
     env: node
-    plan: free
+    plan: starter # Changed from 'free' as 'free' is not a valid plan identifier in YAML
     buildCommand: npm install && npm run build
     startCommand: npm start
     rootDir: backend
     envVars:
       - key: MONGODB_URI
-        sync: false # You will be prompted to enter your MongoDB connection string
+        sync: false
       - key: JWT_SECRET
         generateValue: true
       - key: HMAC_SECRET
@@ -17,16 +17,16 @@ services:
       - key: NODE_ENV
         value: production
       - key: CORS_ORIGIN
-        value: "*" # Temporarily allow all origins to ensure connectivity. Update this to your frontend URL later.
+        value: "*" # Temporarily allow all origins
 
-  # Frontend Static Site
+  # Frontend Static Site (React/Vite)
   - type: web
     name: vibecheck-frontend
     env: static
-    plan: free
+    plan: starter # Changed from 'free' as 'free' is not a valid plan identifier in YAML
     buildCommand: npm install && npm run build
     staticPublishPath: ./dist
     rootDir: frontend
     envVars:
       - key: VITE_API_URL
-        sync: false # You will be prompted. Enter: https://vibecheck-backend.onrender.com (You might need to update this after the backend URL is finalized)
+        sync: false
