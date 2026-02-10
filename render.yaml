@@ -1,4 +1,5 @@
 services:
+  # Backend API
   - type: web
     name: vibecheck-backend
     env: node
@@ -7,17 +8,18 @@ services:
     startCommand: npm start
     rootDir: backend
     envVars:
-      - key: DATABASE_URL
-        fromDatabase:
-          name: vibecheck-db
-          property: connectionString
+      - key: MONGODB_URI
+        sync: false # You will be prompted to enter your MongoDB connection string
       - key: JWT_SECRET
         generateValue: true
       - key: HMAC_SECRET
         generateValue: true
       - key: NODE_ENV
         value: production
+      - key: CORS_ORIGIN
+        value: "*" # Temporarily allow all origins to ensure connectivity. Update this to your frontend URL later.
 
+  # Frontend Static Site
   - type: web
     name: vibecheck-frontend
     env: static
@@ -27,7 +29,4 @@ services:
     rootDir: frontend
     envVars:
       - key: VITE_API_URL
-        fromService:
-          type: web
-          name: vibecheck-backend
-          property: url
+        sync: false # You will be prompted. Enter: https://vibecheck-backend.onrender.com (You might need to update this after the backend URL is finalized)
