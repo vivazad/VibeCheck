@@ -3,8 +3,9 @@ services:
   - type: web
     name: vibecheck-backend
     env: node
-    plan: starter # Changed from 'free' as 'free' is not a valid plan identifier in YAML
-    buildCommand: npm install && npm run build
+    # Plan removed to allow manual selection (Free/Starter) during creation
+    # plan: starter
+    buildCommand: npm install --include=dev && npm run build
     startCommand: npm start
     rootDir: backend
     envVars:
@@ -23,8 +24,9 @@ services:
   - type: web
     name: vibecheck-frontend
     env: static
-    plan: starter # Changed from 'free' as 'free' is not a valid plan identifier in YAML
-    buildCommand: npm install && npm run build
+    # Plan removed to allow manual selection
+    # plan: free
+    buildCommand: npm install --include=dev && npm run build
     staticPublishPath: ./dist
     rootDir: frontend
     envVars:
